@@ -2406,48 +2406,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_109
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d0dae6307d6517428602721a059feca
-      internalID: 1093668431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Village Props_110
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48f5db24d0e09364ca88f891e1b511c4
-      internalID: -1655172309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: TX Village Props_111
       rect:
         serializedVersion: 2
@@ -2642,7 +2600,7 @@ TextureImporter:
         serializedVersion: 2
         x: 576
         y: 448
-        width: 64
+        width: 94
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2661,10 +2619,10 @@ TextureImporter:
       name: TX Village Props_121
       rect:
         serializedVersion: 2
-        x: 640
-        y: 448
-        width: 64
-        height: 64
+        x: 692
+        y: 413
+        width: 118
+        height: 141
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2674,48 +2632,6 @@ TextureImporter:
       bones: []
       spriteID: 2b5743cdbcd7c454da769daebbe4ecef
       internalID: 876863963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Village Props_122
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50953f0a0d70df84f8519291180d3de3
-      internalID: -890142421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Village Props_123
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a78b11638230d69429347093844ef4c7
-      internalID: -1049883000
       vertices: []
       indices: 
       edges: []
@@ -2973,27 +2889,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_136
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad897d9b2c3b04d479700961020e1f68
-      internalID: -1901573381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: TX Village Props_137
       rect:
         serializedVersion: 2
@@ -3101,10 +2996,10 @@ TextureImporter:
       TX Village Props_44: -407795836
       TX Village Props_73: -201955067
       TX Village Props_118: 2090053693
-      TX Village Props_64: -1292587456
-      TX Village Props_79: 1799439005
-      TX Village Props_13: -1754203519
       TX Village Props_109: 1093668431
+      TX Village Props_79: 1799439005
+      TX Village Props_64: -1292587456
+      TX Village Props_13: -1754203519
       TX Village Props_131: 1185398955
       TX Village Props_14: -474156428
       TX Village Props_136: -1901573381
