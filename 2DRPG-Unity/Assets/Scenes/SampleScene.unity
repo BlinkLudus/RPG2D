@@ -437,7 +437,7 @@ MonoBehaviour:
     m_Bits: 64
   animator: {fileID: 61466091}
   speed: 5
-  jumpingPower: 10
+  jumpingPower: 7
 --- !u!95 &61466091
 Animator:
   serializedVersion: 4
