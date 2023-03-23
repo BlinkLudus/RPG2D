@@ -320,7 +320,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 61466085}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2e3530aeed9df0b44b3e6dfa533d5b51, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -342,11 +342,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &61466088
 SpriteRenderer:
@@ -411,7 +411,8 @@ Transform:
   m_LocalPosition: {x: -7.547, y: -3.43, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 227840331}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -427,7 +428,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b83c67bd2680c46929b0775323c2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
+  jumpingPower: 10
+  rb: {fileID: 61466087}
+  groundCheck: {fileID: 227840331}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &166417541
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +519,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &227840330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227840331}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227840331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227840330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.322, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 61466089}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292890965
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +561,7 @@ GameObject:
   - component: {fileID: 292890966}
   - component: {fileID: 292890968}
   - component: {fileID: 292890967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +672,7 @@ GameObject:
   - component: {fileID: 486305698}
   - component: {fileID: 486305700}
   - component: {fileID: 486305699}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1154,7 @@ GameObject:
   - component: {fileID: 838047287}
   - component: {fileID: 838047286}
   - component: {fileID: 838047285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1265,7 @@ GameObject:
   - component: {fileID: 884425183}
   - component: {fileID: 884425185}
   - component: {fileID: 884425184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1669,7 @@ GameObject:
   - component: {fileID: 1572811799}
   - component: {fileID: 1572811801}
   - component: {fileID: 1572811800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1780,7 @@ GameObject:
   - component: {fileID: 1595733603}
   - component: {fileID: 1595733602}
   - component: {fileID: 1595733601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2143,7 @@ GameObject:
   - component: {fileID: 2028057804}
   - component: {fileID: 2028057806}
   - component: {fileID: 2028057805}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2216,7 +2254,7 @@ GameObject:
   - component: {fileID: 2144885734}
   - component: {fileID: 2144885736}
   - component: {fileID: 2144885735}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TX Tileset Ground_10 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
