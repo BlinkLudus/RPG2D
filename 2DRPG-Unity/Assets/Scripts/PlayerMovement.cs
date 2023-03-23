@@ -5,41 +5,49 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public CharacterController controller;
     
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
-
     public Animator animator;
-    private float horizontal;
+    float horizontal = 0f;
     public float speed = 10f; //The speed at which the player moves
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
+    bool crouch = false;
+    bool jump = false;
 
 
     // Update is called once per frame
     void Update()
     {
-        
 
         //Get horizontal input axis (Left & Right arrow keys, A/D, gamepad)
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxisRaw("Horizontal") * speed;
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            jump = true;
             animator.SetBool("IsJumping", true);
         } 
         
-        if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y > 0f)
+        /*if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             
+        }*/
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        }else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
         }
 
-        Flip();
+        //Flip();
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        
     }
    
     public void OnLanding()
@@ -47,17 +55,26 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsJumping", false);
     }
 
-    private bool IsGrounded()
+     public void OnCrouching(bool isCrouching)
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        animator.SetBool("IsCrouching", isCrouching);
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        controller.Move(horizontal * Time.fixedDeltaTime, crouch, jump);
+        jump = false;
+
     }
 
-    private void Flip()
+    /*private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }*/
+
+
+
+    /*private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
@@ -66,5 +83,5 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-    }
+    }*/
 }
