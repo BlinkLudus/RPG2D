@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontal = 0f;
     public float speed = 10f; //The speed at which the player moves
     public float jumpingPower = 16f;
-    private bool isFacingRight = true;
+    //private bool isFacingRight = true;
     bool crouch = false;
     bool jump = false;
 
